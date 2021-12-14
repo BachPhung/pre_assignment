@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Service from '../components/Service/service'
-import { Card } from '../components/Card/Card'; 
+import { Card } from '../components/Card/Card';
+import './SearchPage.css'
 export const SearchPage = () => {
     const [text,setText] = useState('')
     const [city,setCity] = useState({});
@@ -9,7 +10,7 @@ export const SearchPage = () => {
     const [firstRender,setFirstRender] = useState(true);
     useEffect(()=>{
      if(valid===false && firstRender===false){
-         document.querySelector('.message').innerHTML='<p>City Not Found</p>'
+         document.querySelector('.message').innerHTML=`<p>City Not Found</p>`
      }
      else{
         document.querySelector('.message').innerHTML=''
@@ -31,19 +32,16 @@ export const SearchPage = () => {
         setWeather(resWeather);
     }
     const handleTextChange = (e)=>{   
-        console.log(e.target.value);
         setText(e.target.value)
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className='form' onSubmit={handleSubmit}>
                 <div>
-                <input value={text} onChange={handleTextChange}></input>
-                <button type='submit'>Show weather info</button>
-                <div className='message'></div>
-                
+                <input  value={text} onChange={handleTextChange} placeholder='Enter the name of a city'></input>
+                <button className='form-btn' type='submit'>Show weather info</button>
+                <div className='message'></div>            
                 </div>
-                
             </form>
             <div style={{display:"flex", justifyContent:"center"}}>
             <Card city={city} weather={weather}></Card>

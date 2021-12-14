@@ -3,7 +3,6 @@ import { Avatar } from '@mui/material'
 import { deepOrange } from '@mui/material/colors'
 export const Card = (props) => {
     if(props.weather===undefined) {return(<div></div>)}
-    console.log(props)
     return (
         <div className="card-container">
             <div className='card-heading'>
