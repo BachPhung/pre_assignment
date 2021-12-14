@@ -1,6 +1,6 @@
 import axios from "axios";
-const cityURL = 'http://dataservice.accuweather.com/locations/v1/cities/search/'
-const weatherURL = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/'
+const cityURL = 'https://dataservice.accuweather.com/locations/v1/cities/search/'
+const weatherURL = 'https://dataservice.accuweather.com/forecasts/v1/daily/1day/'
 const locationURL = 'https://geolocation-db.com/json/'
 const apiKEY= 'd9X5jDfJIJhZKKnEtadfBuaxoh2NAhy8'
 
