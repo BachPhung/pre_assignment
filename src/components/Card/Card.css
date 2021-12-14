@@ -1,0 +1,33 @@
+.card-container{
+    width: 350px;
+    height:550px;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px #888888;
+}
+
+.card-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-city{
+    margin:0 10px;
+    font-size: 40px;
+}
+
+.card-temp > p {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.card-img > img{
+    width: 180px;
+    height:180px;
+}
+
+.card-decs > p{
+    font-size: 30px;
+}
